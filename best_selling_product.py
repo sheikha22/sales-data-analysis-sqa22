@@ -9,9 +9,10 @@ bestProduct = ""
 
 for product in salesData:
     if product["sales"] > maxSales:
-        maxSales = product["sales"]
-        bestProduct = product["product"]
-    else:
-        bestProduct = bestProduct
+    maxSales = product["sales"]
+    bestProduct = product["product"]
+else:
+    print("Sales value not higher than current maximum")
+
 
 print("Best selling product:", bestProduct)

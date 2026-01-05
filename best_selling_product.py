@@ -1,4 +1,4 @@
-salesData = [
+ salesData = [
     {"product": "A", "sales": 50},
     {"product": "B", "sales": 80},
     {"product": "C", "sales": 30}
@@ -7,11 +7,15 @@ salesData = [
 maxSales = 0
 bestProduct = ""
 
-for product in salesData:
-    if product["sales"] > maxSales:
-        maxSales = product["sales"]
-        bestProduct = product["product"]
-    else:
-        bestProduct = bestProduct
+if len(salesData) == 0:
+    print("No sales data available")
+else:
+    for product in salesData:
+        if product["sales"] > maxSales:
+            maxSales = product["sales"]
+            bestProduct = product["product"]
+        else:
+            bestProduct = bestProduct
 
-print("Best selling product:", bestProduct)
+    print("Best selling product:", bestProduct)
+
